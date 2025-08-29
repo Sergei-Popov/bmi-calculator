@@ -1,0 +1,352 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-grey-300: #acc1de;
+  --color-grey-500: #5e6e85;
+  --color-blue-100: #e1e7fe;
+  --color-blue-300: #b3d3f1;
+  --color-blue-500: #345ff6;
+  --color-blue-900: #253347;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 85px 41px;
+  background: url(../images/hero-container.png) no-repeat center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 780px) {
+  .header {
+    align-items: center;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 41px;
+}
+
+.header__logo {
+  width: 58.75px;
+  height: 58.75px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+@media screen and (max-width: 780px) {
+  .section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.section__image {
+  max-width: 564px;
+  max-height: 533px;
+  flex: 1;
+}
+
+.text__container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 564px;
+}
+
+@media screen and (max-width: 780px) {
+  .text__container {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.text__title {
+  color: var(--color-blue-900,);
+  font-weight: 600;
+  font-size: 64px;
+  font-style: normal;
+  line-height: 110%;
+  letter-spacing: -3.2px;
+}
+
+.text__description {
+  color: var(--color-grey-500);
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 150%;
+}
+
+.calculator__container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 564px;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.1);
+  background-color: var(--color-white);
+}
+
+.calculator__box {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.calculator__input-description {
+  color: var(--color-blue-900);
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: -1.2px;
+}
+
+.calculator__options {
+  display: flex;
+  gap: 24px;
+}
+
+.calculator__option {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--color-blue-900);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  cursor: pointer;
+}
+
+.calculator__option input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 31px;
+  height: 31px;
+}
+
+.calculator__option-checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border: none;
+  outline: none;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-blue-100);
+  transition: all 0.2s ease;
+}
+
+.calculator__option-checkmark::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--color-blue-500);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.calculator__option
+  input[type='radio']:checked
+  + .calculator__option-checkmark::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.calculator__inputs {
+  display: flex;
+  gap: 24px;
+}
+
+.calculator__input-group {
+  display: flex;
+  gap: 24px;
+}
+
+.calculator__input-group--metric {
+  flex-direction: row;
+}
+
+.calculator__input-group--imperial {
+  flex-direction: column;
+}
+
+.calculator__input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.calculator__input-row {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+}
+
+.calculator__label {
+  color: var(--color-grey-500);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150% /* 21px */;
+}
+
+.calculator__input {
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--color-grey-500);
+  background: var(--color-white);
+  font-size: 24px;
+  flex: 1;
+}
+
+/* Убираем стрелочки у input type="number" */
+
+.calculator__input::-webkit-outer-spin-button,
+.calculator__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calculator__input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.calculator__input::placeholder {
+  color: var(--color-blue-500);
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: -1.2px;
+}
+
+.calculator__results {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  border-radius: 16px 100px 100px 16px;
+  padding: 32px;
+  background-color: var(--color-blue-500);
+}
+
+@media screen and (max-width: 500px) {
+  .calculator__results {
+    align-items: self-start;
+    flex-direction: column;
+  }
+}
+
+.calculator__result-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--color-white);
+}
+
+.calculator__result-text {
+  color: var(--color-white);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.calculator__result-score {
+  color: var(--color-white);
+  font-family: Inter, sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -3.2px;
+}
+
+.calculator__ideal-weight {
+  flex: 1 0 0;
+  color: var(--color-white);
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 150%;
+}
+
+.tips__container {
+  display: flex;
+  gap: 32px;
+  padding: 92.5px 0;
+  margin: 85px 0;
+  border-radius: 35px;
+  flex: 1;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgb(214 252 254 / 0) 0%,
+    rgb(214 230 254 / 0.25) 100%
+  );
+}
+
+.tips__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 365px;
+}
+
+.tips__item img {
+  margin-bottom: 24px;
+}
+
+.tips__title {
+  color: var(--color-blue-900);
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: -1.2px;
+}
+
+.tips__description {
+  color: var(--color-grey-500);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}

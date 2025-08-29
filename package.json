@@ -1,0 +1,22 @@
+{
+  "name": "bmi-calculator",
+  "version": "0.0.1",
+  "description": "Body Mass Index Calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format": "prettier --write './**/*.{html,css,js}'",
+    "lint": "stylelint \"**/*.css\"",
+    "lintfix": "stylelint \"**/*.css\" --fix"
+  },
+  "keywords": [
+    "VanillaJS"
+  ],
+  "author": "Sergei Popov",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.6.2",
+    "stylelint": "^16.23.1"
+  }
+}
