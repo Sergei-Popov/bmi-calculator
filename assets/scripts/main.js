@@ -24,19 +24,19 @@ const data = {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-  const cisLocales = [
-    'ru',
-    'uk',
-    'be',
-    'kk',
-    'uz',
-    'ky',
-    'tg',
-    'tk',
-    'az',
-    'hy',
-    'ka',
-  ];
+  // const cisLocales = [
+  //   'ru',
+  //   'uk',
+  //   'be',
+  //   'kk',
+  //   'uz',
+  //   'ky',
+  //   'tg',
+  //   'tk',
+  //   'az',
+  //   'hy',
+  //   'ka',
+  // ];
 
   // let localData = cisLocales.includes(navigator.language.slice(0, 2)) ? data.russian : data.english;
 
