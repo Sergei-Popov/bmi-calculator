@@ -21,6 +21,7 @@
 }
 
 @media screen and (max-width: 1100px) {
+
   .header {
     align-items: center;
   }
@@ -47,6 +48,7 @@
 }
 
 @media screen and (max-width: 1100px) {
+
   .section {
     flex-direction: column;
     align-items: center;
@@ -68,6 +70,7 @@
 }
 
 @media screen and (max-width: 1100px) {
+
   .text__container {
     align-items: center;
     text-align: center;
@@ -260,6 +263,7 @@
 }
 
 @media screen and (max-width: 500px) {
+
   .calculator__results {
     align-items: self-start;
     flex-direction: column;
@@ -380,8 +384,8 @@
     gap: 17px;
     padding: 32px;
     border-radius: 16px;
-    background: var(--color-white, #FFF);
-    box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+    background: var(--color-white, #fff);
+    box-shadow: 16px 32px 56px 0 rgb(143 174 207 / 0.25);
   }
 
   .grid__item-text {
@@ -443,7 +447,7 @@
 }
 
 .grid__description {
-  color: var(--color-grey-500, #5E6E85);
+  color: var(--color-grey-500, #5e6e85);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -456,6 +460,7 @@
     flex-direction: column;
     padding: 50px 0;
     margin-bottom: 0;
+
     .tips__item {
       max-width: none;
       display: flex;
@@ -478,8 +483,8 @@
       gap: 17px;
       padding: 32px;
       border-radius: 16px;
-      background: var(--color-white, #FFF);
-      box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+      background: var(--color-white, #fff);
+      box-shadow: 16px 32px 56px 0 rgb(143 174 207 / 0.25);
     }
 
     .grid__item-text {
@@ -529,13 +534,13 @@
       grid-row-end: 5;
     }
   }
-  
 }
 
 @media screen and (max-width: 575px) {
 
   .header {
     padding: 50px 15px;
+
     .text__title {
       font-size: 48px;
     }
@@ -552,7 +557,7 @@
   .grid {
     gap: 16px;
     grid-template-columns: repeat(1, 1fr);
-    padding: 82px 0;  
+    padding: 82px 0;
 
     .grid__item {
       max-width: none;
@@ -561,8 +566,8 @@
       gap: 17px;
       padding: 32px;
       border-radius: 16px;
-      background: var(--color-white, #FFF);
-      box-shadow: 16px 32px 56px 0 rgba(143, 174, 207, 0.25);
+      background: var(--color-white, #fff);
+      box-shadow: 16px 32px 56px 0 rgb(143 174 207 / 0.25);
     }
 
     .grid__item-text {
